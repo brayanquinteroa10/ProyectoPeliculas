@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
+<head th:insert="~{layouts/head :: head}"></head>
+<body>
+<header th:insert="~{layouts/header :: header}"></header>
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xxl-6 g-4">
+    <!--/*@thymesVar id="peliculas" type=""*/-->
+        <div class="col" th:each="pelicula : ${peliculas}">
+            <div class="card">
+                <img th:src="@{${'/archivo?n='} + ${pelicula.imagen == null ? '_default.jpg' : pelicula.imagen}}" class="card-img-top" alt="Foto_pelicula">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${pelicula.nombre}"></h5>
+                    <p class="card-text" th:text="${pelicula.genero.nombre}"></p>
+                    <div class="catalogo-actor-container" th:each="protagonista : ${pelicula.protagonistas}">
+                        <div class="catalogo-actor-img" th:style="'background-image:url(' + ${protagonista.urlImagen} + ')'">
+
+                        </div>
+                        <div class="catalogo-actor-txt" th:text="${protagonista.nombre}">
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

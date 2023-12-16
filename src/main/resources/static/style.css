@@ -1,0 +1,42 @@
+.form-control:focus{
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.70) !important;
+}
+
+.form-select:focus{
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.70) !important;
+}
+
+.catalogo-actor-container {
+    display: flex;
+    align-content: stretch;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.catalogo-actor-img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background: red;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 4px;
+}
+
+.catalogo-actor-txt{
+   margin-left: 4px;
+}
+
+#vista_previa {
+    width: 200px;
+    height: 115px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
